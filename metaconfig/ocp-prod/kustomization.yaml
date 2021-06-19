@@ -1,0 +1,10 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: ocp-prod
+commonLabels:
+  app: moc-metaconfig-ocp-prod
+resources:
+  - ../../channels
+  - subscription.yaml
+  - placementrule.yaml
+  - application.yaml
